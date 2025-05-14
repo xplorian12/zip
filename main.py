@@ -2,7 +2,10 @@ import pandas as pd
 import dash
 from dash import dcc, html, Input, Output
 import dash_bootstrap_components as dbc
+from flask import Flask
 
+
+server = Flask(__name__)
 # Load your data
 df = pd.read_csv("research.csv")
 
@@ -97,5 +100,7 @@ def display_zip_data(zip_code):
         ])
     ])
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    # Get the port from the environment variable
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port)
