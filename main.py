@@ -29,11 +29,11 @@ app.layout = dbc.Container([
     html.H2("LA Zip Code Data Dashboard (2025)", className="mt-4 mb-4 text-center"),
 
     dcc.Dropdown(
-        id="zip-dropdown",
-        options=dropdown_options,
-        placeholder="Select a ZIP code",
-        style={"margin-bottom": "30px"}
-    ),
+    id="zip-dropdown",
+    options=dropdown_options,
+    value=dropdown_options[0]["value"],  # Default selection
+    style={"margin-bottom": "30px"}
+),
 
     html.Div(id="zip-data-display")
 ], fluid=True)
