@@ -23,7 +23,7 @@ dropdown_options = [
 ]
 
 # Initialize Dash app with Bootstrap for clean design
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUX])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LUX], server=server)
 
 app.layout = dbc.Container([
     html.H2("LA Zip Code Data Dashboard (2025)", className="mt-4 mb-4 text-center"),
