@@ -1,3 +1,4 @@
 pandas
 dash
 dash_bootstrap_components
+gunicorn==23.0.0
